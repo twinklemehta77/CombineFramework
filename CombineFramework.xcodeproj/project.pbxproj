@@ -13,6 +13,7 @@
 		08D888E42AF9AA05005D41D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D888E22AF9AA05005D41D0 /* Main.storyboard */; };
 		08D888E62AF9AA08005D41D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08D888E52AF9AA08005D41D0 /* Assets.xcassets */; };
 		08D888E92AF9AA08005D41D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D888E72AF9AA08005D41D0 /* LaunchScreen.storyboard */; };
+		08D888F12AF9AF8E005D41D0 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D888F02AF9AF8D005D41D0 /* ApiCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		08D888E52AF9AA08005D41D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08D888E82AF9AA08005D41D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08D888EA2AF9AA08005D41D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08D888F02AF9AF8D005D41D0 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				08D888DC2AF9AA05005D41D0 /* AppDelegate.swift */,
 				08D888DE2AF9AA05005D41D0 /* SceneDelegate.swift */,
 				08D888E02AF9AA05005D41D0 /* ViewController.swift */,
+				08D888F02AF9AF8D005D41D0 /* ApiCaller.swift */,
 				08D888E22AF9AA05005D41D0 /* Main.storyboard */,
 				08D888E52AF9AA08005D41D0 /* Assets.xcassets */,
 				08D888E72AF9AA08005D41D0 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				08D888E12AF9AA05005D41D0 /* ViewController.swift in Sources */,
 				08D888DD2AF9AA05005D41D0 /* AppDelegate.swift in Sources */,
 				08D888DF2AF9AA05005D41D0 /* SceneDelegate.swift in Sources */,
+				08D888F12AF9AF8E005D41D0 /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
