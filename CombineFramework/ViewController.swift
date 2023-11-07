@@ -41,7 +41,7 @@ class MyCustomeTableCell: UITableViewCell {
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-    var observer: AnyCancellable?
+    var observers: [AnyCancellable] = []
     
     private var model = [String]()
     
@@ -59,7 +59,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.dataSource = self
         tableView.frame = view.bounds
         
-        observer = ApiCaller.shared.fetchCompanies()
+        ApiCaller.shared.fetchCompanies()
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
             switch completion {
@@ -71,7 +71,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }, receiveValue: { [weak self] value in
             self?.model = value
             self?.tableView.reloadData()
-        })
+        }).store(in: &observers)
         
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +80,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCustomeTableCell else {fatalError()}
-        cell.textLabel?.text = model[indexPath.row]
+//        cell.textLabel?.text = model[indexPath.row]
+        cell.action.sink { string in
+            print(string)
+        }.store(in: &observers)
         return cell
     }
     
